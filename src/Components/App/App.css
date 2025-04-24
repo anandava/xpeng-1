@@ -1,0 +1,75 @@
+.container-app {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 40px 20px; */
+    gap: 40px;
+  }
+  
+  .container-app img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .quote-app {
+    max-width: 400px;
+  }
+  
+  .title-app,
+  .desk-app {
+    text-align: right;
+  }
+  
+  .parent-btn-app {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .store-app {
+    width: 45%;
+    max-width: 150px;
+  }
+  
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .container-app {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .quote-app {
+      text-align: center;
+    }
+  
+    .title-app,
+    .desk-app {
+      text-align: center;
+    }
+  
+    .parent-btn-app {
+      justify-content: center;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .container-app {
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+  
+    .quote-app {
+      max-width: 100%;
+    }
+  
+    .store-app {
+      width: 100px;
+    }
+  }
+  

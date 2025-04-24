@@ -1,0 +1,120 @@
+.container-unique {
+  background-color: #000000;
+  margin-top: 100px;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+.parent-img-unique {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+.img-unique {
+  width: 25%;
+}
+.title-unique-spec-car {
+  padding-top: 100px;
+  text-align: center;
+  color: white;
+  font-size: 27px;
+}
+
+.parent-img-unique {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom tetap */
+  gap: 20px;
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-unique {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ini teks di dalam gambar, posisinya di bawah dan tengah */
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
+
+
+.parent-img-unique-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* hanya 2 kolom */
+  gap: 20px;
+  padding-bottom: 100px;
+}
+
+.img-wrapper-2 {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img-unique-2 {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Teks overlay di bawah gambar, center */
+.overlay-text-2 {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: center;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .parent-img-unique-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .parent-img-unique {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .parent-img-unique {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* 2 */
+.parent-img-unique-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.img-unique-2 {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+/* src/components/VideoPlayer.css */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Membuat video mengambil seluruh tinggi viewport */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Agar video tidak keluar dari container */
+  }
+  
+  .video-player {
+    width: 100%;
+    height: 100%; /* Membuat video mengisi seluruh tinggi container */
+    object-fit: cover; /* Menyesuaikan gambar/video agar memenuhi kontainer tanpa merusak rasio */
+    display: block;
+  }
+  
+  /* Media queries untuk responsif di berbagai perangkat */
+  @media (max-width: 768px) {
+    .video-container {
+      height: 100vh; /* Membuat video tetap memenuhi layar tablet */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .video-container {
+      height: 100vh; /* Membuat video tetap memenuhi layar ponsel */
+    }
+  }
+  

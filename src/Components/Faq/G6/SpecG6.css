@@ -1,0 +1,107 @@
+.accordion-container {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.accordion-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.accordion-item {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 15px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+}
+
+.accordion-icon {
+  font-size: 15px;
+}
+
+.accordion-body {
+  background-color: #f4f4f4;
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: #555;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sudah ada default styles sebelumnya, kita tambahkan media queries */
+
+@media (max-width: 768px) {
+  .accordion-container {
+    padding: 15px;
+  }
+
+  .accordion-title {
+    font-size: 1.5rem;
+  }
+
+  .accordion-header {
+    padding: 14px 16px;
+    font-size: 1rem;
+  }
+
+  .accordion-body {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+
+  .accordion-icon {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-title {
+    font-size: 1.3rem;
+  }
+
+  .accordion-header {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  .accordion-body {
+    padding: 12px 14px;
+    font-size: 0.9rem;
+  }
+
+  .accordion-icon {
+    font-size: 1.2rem;
+  }
+}
