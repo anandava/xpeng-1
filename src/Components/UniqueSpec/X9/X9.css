@@ -94,6 +94,14 @@
   .parent-img-unique-2 {
     grid-template-columns: 1fr;
   }
+  .container-unique {
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+  }
+  .title-unique-spec-car {
+    padding-top: 50px;
+  }
 }
 
 @media (max-width: 1024px) {

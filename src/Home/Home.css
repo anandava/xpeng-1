@@ -1,8 +1,25 @@
 .first-container {
-    padding-left: 10%;
-    padding-right: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 .seccond-container {
-    padding-left: 17%;
-    padding-right: 17%;
+  padding-left: 17%;
+  padding-right: 17%;
+}
+
+@media (max-width: 768px) {
+  .first-container,
+  .seccond-container {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .title-available-car {
+    margin-top: 50px;
+    font-size: 23px;
+  }
+  .title-card-detail {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 700;
+  }
 }

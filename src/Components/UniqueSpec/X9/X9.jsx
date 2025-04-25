@@ -12,7 +12,7 @@ import img8 from "../../../asset_Xpeng/spec_car_x9/delapan.png";
 const X9 = () => {
   return (
     <React.Fragment>
-      <div className="container-unique">
+      <div className="container-unique" id="x9-specification">
         <h1 className="title-unique-spec-car">
           Unique Specifications of XPENG X9 car
         </h1>

@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-around;
   background-color: white;
-  padding: 12px 20px;
+  padding: 12px 60px;
   color: black;
   position: sticky;
   top: 0;
@@ -17,12 +17,12 @@
   display: flex;
   align-items: center;
   width: 50%;
+  cursor: pointer;
 }
 
 .nav-logo {
-  width: 20%;
+  width: 15%;
 }
-
 
 /* --- Navbar links wrapper --- */
 .navbar-links {
@@ -36,6 +36,7 @@
   color: black;
   text-decoration: none;
   padding: 8px 10px;
+  font-size: 14px;
 }
 
 .language-icon {
@@ -60,13 +61,17 @@
 /* --- Dropdown content --- */
 .dropdown-content {
   display: none;
-  position: absolute;
+  position: absolute; /* Agar dropdown tetap di bawah tombol */
+  top: 100%; /* Dropdown muncul tepat di bawah tombol */
+  left: 0;
   background-color: white;
   min-width: 200px;
-  top: 100%;
-  left: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 9999; /* Pastikan dropdown muncul di atas konten lainnya */
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 .dropdown-link {
@@ -77,11 +82,14 @@
   font-size: 14px;
 }
 
-/* --- Hover interactivity --- */
-.dropdown:hover .dropdown-content {
-  display: block;
+/* --- Dropdown active class --- */
+.dropdown-content.show {
+  display: block !important;
+  opacity: 1;
+  max-height: 500px;
 }
 
+/* --- Hover interactivity --- */
 .nav-link:hover,
 .dropdown-link:hover,
 .dropdown-toggle:hover {
@@ -96,7 +104,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* --- Hamburger icon --- */
@@ -106,38 +114,76 @@
   cursor: pointer;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 998;
+}
+
+.language-icon {
+  font-size: 25px;
+}
+
 /* ========================= */
 /*       Responsive          */
 /* ========================= */
 @media (max-width: 768px) {
   .navbar-links {
+    align-items: start;
     flex-direction: column;
-    background-color: #0b1e2d;
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    display: none;
+    background-color: #ffffff;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Sembunyi di luar layar kanan */
+    display: flex;
     gap: 10px;
-    padding: 10px 0;
+    padding: 60px 20px;
     z-index: 999;
+    transition: right 0.3s ease-in-out; /* ✨ animasi masuk */
   }
 
   .navbar-links.active {
-    display: flex;
+    right: 0; /* Muncul dari kanan */
   }
 
   .dropdown-content {
-    position: static;
-    background-color: #f4f4f4;
+    position: static; /* Dropdown tidak perlu absolute pada mobile */
+    background-color: #ffffff;
     box-shadow: none;
+    display: none;
+    padding-left: 10px;
   }
 
-  .dropdown:hover .dropdown-content {
-    display: none; /* Disable hover on mobile */
+  .dropdown-content.show {
+    display: block !important;
   }
 
   .hamburger {
     display: block;
+    z-index: 1000;
+  }
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo {
+    width: 60%;
+  }
+  .navbar {
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  /* Hapus hover untuk dropdown di desktop */
+  .dropdown-content {
+    display: block; /* Dropdown hanya muncul dengan klik */
   }
 }

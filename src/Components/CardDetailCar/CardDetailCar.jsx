@@ -2,8 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "./CardDetailCar.css";
 
 import x9Car from "../../asset_Xpeng/card_car/x9.png";
@@ -13,7 +12,7 @@ import iconDrive from "../../asset_Xpeng/icon_setir.png";
 
 const CardDetailCar = () => {
   return (
-    <>
+    <div id="modelcar">
       <h1 className="title-card-detail">
         Large selection of car models from XPENG
       </h1>
@@ -39,7 +38,7 @@ const CardDetailCar = () => {
             spaceBetween: 20,
           },
         }}
-        modules={[Pagination, Autoplay]}
+        modules={[Autoplay]}
         className="mySwiper"
       >
         {/* Slide 1 */}
@@ -55,7 +54,7 @@ const CardDetailCar = () => {
               <button className="available-btn">Available</button>
               <h2 className="price-car">$41,490</h2>
             </div>
-            <a className="btn-test-drive" href="">
+            <a className="btn-test-drive" href="https://api.whatsapp.com/send?phone=62882006469274&text=Halo,%20Saya%20ingin%20Test%20Drive%20Xpeng%20type%20X9.">
               <img className="icon-test-drive" src={iconDrive} alt="" /> Test
               Drive
             </a>
@@ -75,7 +74,7 @@ const CardDetailCar = () => {
               <button className="available-btn">Available</button>
               <h2 className="price-car">$56,490</h2>
             </div>
-            <a className="btn-test-drive" href="">
+            <a className="btn-test-drive" href="https://api.whatsapp.com/send?phone=62882006469274&text=Halo,%20Saya%20ingin%20Test%20Drive%20Xpeng%20type%20G6.">
               <img className="icon-test-drive" src={iconDrive} alt="" /> Test
               Drive
             </a>
@@ -87,9 +86,7 @@ const CardDetailCar = () => {
           <div className="parent-card-detail">
             <img src={p7Car} alt="XPENG P7" className="card-header" />
             <h2 className="title-card-car">XPENG P7</h2>
-            <p className="detail-card-car">
-              Sleek. Intelligent. Adventurous
-            </p>
+            <p className="detail-card-car">Sleek. Intelligent. Adventurous</p>
             <p className="spec-card-car">
               Up to 576 km | 4.1s accel 10-80% in 20mnt (charge)
             </p>
@@ -97,7 +94,7 @@ const CardDetailCar = () => {
               <button className="coming-soon">Coming soon</button>
               <h2 className="price-car">$45,490</h2>
             </div>
-            <a className="btn-test-drive" href="">
+            <a className="btn-test-drive" href="https://api.whatsapp.com/send?phone=62882006469274&text=Halo,%20Saya%20ingin%20Test%20Drive%20Xpeng%20type%20P7.">
               <img className="icon-test-drive" src={iconDrive} alt="" /> Test
               Drive
             </a>
@@ -109,9 +106,7 @@ const CardDetailCar = () => {
           <div className="parent-card-detail">
             <img src={p7Car} alt="XPENG P7" className="card-header" />
             <h2 className="title-card-car">XPENG P7</h2>
-            <p className="detail-card-car">
-              Sleek. Intelligent. Adventurous
-            </p>
+            <p className="detail-card-car">Sleek. Intelligent. Adventurous</p>
             <p className="spec-card-car">
               Up to 576 km | 4.1s accel 10-80% in 20mnt (charge)
             </p>
@@ -126,7 +121,7 @@ const CardDetailCar = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

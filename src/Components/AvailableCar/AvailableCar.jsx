@@ -1,11 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/autoplay"; // tambahkan autoplay css
 
 import "./AvailableCar.css";
-import { Pagination, Autoplay } from "swiper/modules"; // tambahkan Autoplay
+import { Autoplay } from "swiper/modules"; // tambahkan Autoplay
 
 import x9Type from "../../asset_Xpeng/car type_x9.png";
 import g6Type from "../../asset_Xpeng/car type_g6.png";
@@ -38,7 +37,7 @@ const AvailableCar = () => {
             spaceBetween: 40,
           },
         }}
-        modules={[Pagination, Autoplay]} // pastikan Autoplay di modules
+        modules={[Autoplay]} // pastikan Autoplay di modules
         className="mySwiper"
       >
         <SwiperSlide>

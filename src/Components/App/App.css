@@ -29,9 +29,11 @@
   }
   
   .store-app {
-    width: 45%;
-    max-width: 150px;
+    width: 100%; /* atau sesuai kebutuhan */
+    margin-right: 10px;
+    display: inline-block;
   }
+  
   
   /* Tablet */
   @media (max-width: 1024px) {

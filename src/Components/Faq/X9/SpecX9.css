@@ -14,7 +14,7 @@
 }
 
 .accordion-item {
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   margin-bottom: 10px;
   border-radius: 8px;
   overflow: hidden;
@@ -42,10 +42,10 @@
 }
 
 .accordion-body {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   padding: 16px 20px;
   font-size: 1rem;
-  color: #555;
+  color: #000000;
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -65,6 +65,7 @@
 @media (max-width: 768px) {
   .accordion-container {
     padding: 15px;
+    max-width: 100%;
   }
 
   .accordion-title {
@@ -104,4 +105,64 @@
   .accordion-icon {
     font-size: 1.2rem;
   }
+}
+
+/* 2 */
+.spec-list {
+  line-height: 35px;
+  padding-left: 0;
+}
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+.detail-spec {
+  font-weight: 600;
+}
+.tab-feature-item {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  color: #000000;
+  word-wrap: break-word;
+  gap: 5px;
+}
+.tab-feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin-top: 15px;
+  list-style: none;
+}
+.check-configuration-spec {
+  color: rgb(1, 163, 1);
+}
+.tab-content {
+  width: 100%;
+  overflow-x: hidden;
+}
+.tab-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-bottom: 12px;
+}
+
+.tab-button {
+  white-space: nowrap;
+  flex-shrink: 0;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tab-button.active {
+  background-color: black;
+  color: white;
 }

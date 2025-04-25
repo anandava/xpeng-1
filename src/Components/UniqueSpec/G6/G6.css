@@ -93,6 +93,23 @@
     .parent-img-unique-2 {
       grid-template-columns: 1fr;
     }
+    .container-unique-2 {
+      padding-left: 3%;
+      padding-right: 3%;
+      padding-bottom: 3%;
+    }
+    .title-unique-spec-car {
+      padding-top: 20px;
+      font-size: 23px;
+    }
+    .parent-img-unique-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-bottom: 0;
+    }
   }
   
   @media (max-width: 1024px) {
@@ -104,6 +121,7 @@
   @media (max-width: 600px) {
     .parent-img-unique {
       grid-template-columns: repeat(1, 1fr);
+      /* padding-bottom: 0; */
     }
   }
   

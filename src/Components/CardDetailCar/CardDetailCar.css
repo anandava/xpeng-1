@@ -47,7 +47,8 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  background-color: rgb(226, 196, 158);
+  background-color: white;
+  border: 1px solid black;
   padding: 8px;
   margin-top: 10px;
   text-decoration: none;
@@ -64,7 +65,7 @@
   margin-top: -5px;
 }
 .title-card-car {
-    font-size: 22px;
+  font-size: 22px;
 }
 .available-btn {
   background-color: rgb(216, 3, 3);
@@ -83,5 +84,8 @@
   border-radius: 0 0 20px 0;
 }
 .price-car {
-    font-size: 21px;
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
 }

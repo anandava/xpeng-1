@@ -14,6 +14,7 @@
     height: 100%; /* Membuat video mengisi seluruh tinggi container */
     object-fit: cover; /* Menyesuaikan gambar/video agar memenuhi kontainer tanpa merusak rasio */
     display: block;
+    pointer-events: none;
   }
   
   /* Media queries untuk responsif di berbagai perangkat */
