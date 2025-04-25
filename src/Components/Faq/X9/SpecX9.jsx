@@ -144,7 +144,10 @@ const SpecX9 = () => {
       "Rear Brake Type: Ventilated Discs",
       "Rear Suspension: Multi-Link",
     ],
-    Transmission: ["Transmission Type: Automatic", "Gearbox: Single Speed"],
+    Transmission: [
+      "Transmission Type: Automatic",
+      "Gearbox: Single Speed",
+    ],
     Engine: [
       "Battery Capacity: 101.5 kWh",
       "Emission: 0 g/km",
@@ -166,6 +169,7 @@ const SpecX9 = () => {
       "Steering Type: Power",
     ],
   };
+  
 
   const renderTabContent = () => (
     <ul className="tab-feature-list">
